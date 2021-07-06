@@ -34,12 +34,12 @@ def get_flight_info(choice):
 def create_flight():
     pass
 
-# def check_flight():
-#     from file_open_handling import FileOpenHandling
-#     xfile = "flight_records.json"
-#     readf = FileOpenHandling()
-#     record = (readf.FileRead(xfile))
-#     for x in record:
+def check_flight():
+    from file_open_handling import FileOpenHandling
+    xfile = "flight_records.json"
+    readf = FileOpenHandling()
+    record = (readf.list_flight_number(xfile))
+    return record
 
 
 # provides information about European destinations
@@ -106,16 +106,12 @@ def get_duration():
     else:
         return time
 
-# from file_open_handling import FileOpenHandling
-# xfile = "flight_records.json"
-# readf = FileOpenHandling()
-# print(print_options())
-origin = print(get_destination_info(print_options_destinations()))
-destination = print(get_destination_info(get_destination()))
-duration = print(get_duration())
+
+# origin = print(get_destination_info(print_options_destinations()))
+# destination = print(get_destination_info(get_destination()))
+# duration = print(get_duration())
 flight = print(get_flight_info(print_options_flight()))
-# print(readf.FileRead(xfile))
-# print(readf.FileOpen(xfile))
+
 
 
 

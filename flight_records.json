@@ -16,6 +16,23 @@
             "seat": "22B"
           }
         ]
+      },
+      {
+        "flight_number": "20020",
+        "origin": "Paris",
+        "destination": "London",
+        "duration": 60,
+        "vehicle" : "Boing 737",
+        "passenger": [
+          {
+            "passport": "1445543LB",
+            "seat": "12A"
+          },
+          {
+            "passport": "PASSPORTID222",
+            "seat": "22B"
+          }
+        ]
       }
     ]
 }

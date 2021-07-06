@@ -3,21 +3,21 @@ class FileOpenHandling:
     def parse(self, xfile):
         try:
             with open(xfile, "r") as content: # open file into contents variable
-                exchange = json.load(content) # JSON object as dictionary
-                rates = exchange["rates"][country]
-                return rates
+                file = json.load(content) # JSON object as dictionary
+                return file
         except FileNotFoundError as err:
             return "File not found"
         except KeyError as err:
-            return "Bad country code"
+            return "wrong number input"
 
-    def list(self, xfile):
+    def list_flight_number(self, xfile):
         try:
             with open(xfile, "r") as content: # open file into contents variable
-                exchange = json.load(content)  # JSON object as dictionary
-                rates = exchange["rates"]
-                for key in rates.keys():
-                    print(key)
+                file = json.load(content)  # JSON object as dictionary
+
+                flight_number = file["flight"]
+                for key in flight_number:
+                    print(flight_number[0]["flight_number"])
                 return
         except FileNotFoundError as err:
             return "File not found"
