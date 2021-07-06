@@ -101,10 +101,16 @@ def get_duration():
     else:
         return time
 
-
+from file_open_handling import FileOpenHandling
+xfile = "flight_records.json"
+readf = FileOpenHandling()
 # print(print_options())
-origin = print(get_destination_info(print_options_destinations()))
-destination = print(get_destination_info(get_destination()))
-duration = print(get_duration())
-flight = print(get_flight_info(print_options_flight()))
+# origin = print(get_destination_info(print_options_destinations()))
+# destination = print(get_destination_info(get_destination()))
+# duration = print(get_duration())
+# flight = print(get_flight_info(print_options_flight()))
+print(readf.FileRead(xfile))
+print(readf.FileOpen(xfile))
+
+
 
