@@ -1,0 +1,18 @@
+{
+  "flight_trip": [
+    {
+      "id": "W1",
+      "destination": "France",
+      "origin": "England",
+      "passengers": "1",
+      "vehicle": "Plane"
+    },
+    {
+      "id": "W2",
+      "destination": "Poland",
+      "origin": "Italy",
+      "passengers": "2",
+      "vehicle": "Helicopter"
+    }
+  ]
+}
