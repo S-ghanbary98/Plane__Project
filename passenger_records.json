@@ -2,13 +2,15 @@
   "passenger": [
     {
       "passport": "PASSPORTID",
-      "fName": "Connor",
-      "lName": "Hayler"
+      "fName": "connor",
+      "lName": "Hayler",
+      "age": 20
     },
     {
       "passport": "PASSPORTID222",
-      "fName": "Shervin",
-      "lName": "Hayler"
+      "fName": "shervin",
+      "lName": "Hayler",
+      "age": 22
     }
   ]
 }
