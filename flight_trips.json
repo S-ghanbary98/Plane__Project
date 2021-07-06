@@ -1,18 +1,40 @@
 {
-  "flight_trip": [
+  "flight_trip":
+  [
     {
       "id": "W1",
       "destination": "France",
       "origin": "England",
-      "passengers": "1",
-      "vehicle": "Plane"
+      "vehicle": "Plane",
+      "duration": "60",
+      "passenger": [
+        {
+          "passport": "1445543LB",
+          "seat": "12A"
+        },
+        {
+          "passport": "PASSPORTID222",
+          "seat": "22B"
+        }
+      ]
     },
     {
       "id": "W2",
-      "destination": "Poland",
-      "origin": "Italy",
-      "passengers": "2",
-      "vehicle": "Helicopter"
+      "destination": "Spain",
+      "origin": "Russia",
+      "vehicle": "Plane",
+      "duration": "80",
+      "passenger":
+      [
+        {
+          "passport": "1445543LB",
+          "seat": "12A"
+        },
+        {
+          "passport": "PASSPORTID222",
+          "seat": "22B"
+        }
+      ]
     }
   ]
 }
