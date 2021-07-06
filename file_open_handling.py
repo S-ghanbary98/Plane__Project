@@ -1,14 +1,23 @@
+import json
 class FileOpenHandling:
-    def FileRead(self, xfile):
+    def parse(self, xfile):
         try:
-            file = open(xfile)  # open() takes a string arg with file name
-            return ("File was found")
-        except FileNotFoundError as err: # if FileNotFoundError error is found print:
-            return (f"File not found {err}")
-        finally:
-            print ("Thank you for visiting, here's what we found:")
+            with open(xfile, "r") as content: # open file into contents variable
+                exchange = json.load(content) # JSON object as dictionary
+                rates = exchange["rates"][country]
+                return rates
+        except FileNotFoundError as err:
+            return "File not found"
+        except KeyError as err:
+            return "Bad country code"
 
-    def FileOpen(self, xfile):
-        with open(xfile, "r") as file:
-            #file = open(xfile, "r")  # open() takes a string arg with file name
-            return file.read()
+    def list(self, xfile):
+        try:
+            with open(xfile, "r") as content: # open file into contents variable
+                exchange = json.load(content)  # JSON object as dictionary
+                rates = exchange["rates"]
+                for key in rates.keys():
+                    print(key)
+                return
+        except FileNotFoundError as err:
+            return "File not found"
