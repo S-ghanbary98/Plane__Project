@@ -17,7 +17,7 @@ class FileOpenHandling:
 
                 flight_number = file["flight"]
                 for key in flight_number:
-                    print(flight_number[0]["flight_number"])
-                return
+                    print(key["flight_number"])
+                return file
         except FileNotFoundError as err:
             return "File not found"

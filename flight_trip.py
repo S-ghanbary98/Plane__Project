@@ -1,3 +1,4 @@
+
 def print_options_flight():
     # Print flight options
     print("Flight Options")
@@ -38,8 +39,9 @@ def check_flight():
     from file_open_handling import FileOpenHandling
     xfile = "flight_records.json"
     readf = FileOpenHandling()
-    record = (readf.list_flight_number(xfile))
+    record = readf.list_flight_number(xfile)
     return record
+
 
 
 # provides information about European destinations
@@ -106,12 +108,55 @@ def get_duration():
     else:
         return time
 
+def get_flight_id():
+    try:
+        id = int(input("Put a flight ID "))
+    except ValueError:
+        print("The value you entered is invalid. Only numerical values are valid.")
+    else:
+        return id
 
-# origin = print(get_destination_info(print_options_destinations()))
-# destination = print(get_destination_info(get_destination()))
-# duration = print(get_duration())
-flight = print(get_flight_info(print_options_flight()))
+def check_id_exist(flight_ids_list, flight_id):
+
+    for flight in flight_ids_list["flight"]:
+        print(flight["flight_number"])
+        if flight_id == flight["flight_number"]:
+            return True
+        else:
+            return False
+
+origin = print(get_destination_info(print_options_destinations()))
+destination = print(get_destination_info(get_destination()))
+duration = print(get_duration())
+flight_ids_list = get_flight_info(print_options_flight())
+flight_id = get_flight_id()
+print(check_id_exist(flight_ids_list, flight_id))
 
 
 
+
+
+
+# from people import People
+#
+#
+# class FlightTrip(Aircraft, People):
+#
+#     def __init__(self):
+#         super().__init__()
+#
+#     def destination(self):
+#         return "Destination"
+#
+#     def flight_duration(self):
+#         return "Flight Duration"
+#
+#     def origin(self):
+#         return "Origin"
+#
+#     def passengers(self):
+#         return "Passengers"
+#
+#
+# flight1 = FlightTrip()
 
