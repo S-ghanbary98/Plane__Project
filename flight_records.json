@@ -1,0 +1,16 @@
+{
+    "flight": "12345",
+    "origin": "London",
+    "destination": "Paris",
+    "duration": 60,
+    "passenger": [
+    {
+        "passport": "1445543LB",
+        "seat": "12A"
+    },
+    {
+        "passport": "PASSPORTID222",
+        "seat": "22B"
+    }
+  ]
+}

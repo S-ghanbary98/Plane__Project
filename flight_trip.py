@@ -1,6 +1,3 @@
-# def trip():
-
-
 def print_options_flight():
     # Print flight options
     print("Flight Options")
@@ -10,6 +7,7 @@ def print_options_flight():
     print("")
     return get_flight()
 
+# Choose existing flight or new flight
 def get_flight():
     # Get origin choice
     while True:
@@ -23,9 +21,23 @@ def get_flight():
         else:
             return choice
 
-# This module provides information about European destinations
+def get_flight_info(choice):
+    # Use numeric choice to look up destination info
+    # New flight
+    if (choice == 1):
+        return create_flight()
 
+    # Choice 2: Existing Flight
+    elif (choice == 2):
+        return check_flight()
 
+def create_flight():
+    pass
+
+def check_flight():
+    pass
+
+# provides information about European destinations
 def print_options_destinations():
     # Print travel options
     print("Travel Options")
@@ -94,4 +106,5 @@ def get_duration():
 origin = print(get_destination_info(print_options_destinations()))
 destination = print(get_destination_info(get_destination()))
 duration = print(get_duration())
+flight = print(get_flight_info(print_options_flight()))
 
