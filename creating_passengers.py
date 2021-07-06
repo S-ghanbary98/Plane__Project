@@ -10,9 +10,24 @@ def create_passenger(first_name, last_name, passport_number, age,):
     # Some function to not reduce seat number
     ## Reads, Updates and Closes json file
 
-    with open("passenger.json", "r+") as read_file:
+    with open("passengers.json", "r+") as read_file:
         data = json.load(read_file)
         data["passenger"].append(new_passenger)
         read_file.seek(0)
         json.dump(data, read_file, indent = 4)
 
+
+
+def add_flight_details(dictionary, flight)
+
+with open("flightID.json.", "r+") as read_file:
+    data = json.load(read_file)
+    print(data)
+    print(data['flight'])
+
+
+with open("passengers.json", "r+") as read_file:
+    data = json.load(read_file)
+    dataa = data["passenger"][0]
+    dataa["red"] = "red"
+    print(dataa)
