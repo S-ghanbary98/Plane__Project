@@ -5,6 +5,7 @@
         "origin": "London",
         "destination": "Paris",
         "duration": 60,
+        "vehicle" : "Boing 737",
         "passenger": [
           {
             "passport": "1445543LB",
