@@ -1,16 +1,22 @@
+
 {
-  "passenger": [
-    {
-      "passport": "PASSPORTID",
-      "fName": "connor",
-      "lName": "Hayler",
-      "age": 20
-    },
-    {
-      "passport": "PASSPORTID222",
-      "fName": "shervin",
-      "lName": "Hayler",
-      "age": 22
-    }
-  ]
+    "passenger": [
+        {
+            "tickets": 100,
+            "passport": "PASSPORTID",
+            "fName": "Connor",
+            "lName": "Hayler"
+        },
+        {
+            "passport": "PASSPORTID222",
+            "fName": "shervin",
+            "lName": "Hayler"
+        },
+        {
+            "passport": "djsdns",
+            "fName": "sherv",
+            "lName": "ghanbary",
+            "age": 18
+        }
+    ]
 }
